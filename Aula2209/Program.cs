@@ -116,6 +116,15 @@ Console.WriteLine();
 //CONVERSÃO DE ALFANUMÉRICOS PARA NUMÉRICOS
 Console.WriteLine("CONVERSÃO DE ALFANUMÉRICOS PARA NUMÉRICOS");
 
+string alfanum = "100";
+
+int numer = Convert.ToInt32(alfanum);
+
+Console.WriteLine(numer);
+
+string tamanho = Convert.ToString(numer);
+Console.WriteLine(tamanho + " tem " + tamanho.Length + " dígitos.\n");
+
 Console.WriteLine();
 
 //CONVERSÃO DE ALFANUMÉRICOS PARA NUMÉRICOS
