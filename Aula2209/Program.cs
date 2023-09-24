@@ -181,6 +181,10 @@ Console.WriteLine();
 
 //LEITURA DE DADOS ALFANUMÉRICOS
 Console.WriteLine("LEITURA DE DADOS ALFANUMÉRICOS");
+Console.Write("Digite o seu nome: ");
+string nomeuser = Console.ReadLine();
+
+Console.WriteLine("Boa Tarde, " +  nomeuser + "!");
 
 Console.WriteLine();
 
