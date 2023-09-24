@@ -205,6 +205,15 @@ Console.WriteLine();
 
 //LEITURA DE DADOS NUMÉRICOS
 Console.WriteLine("LEITURA DE DADOS NUMÉRICOS");
+Console.Write("Digite a sua idade: ");
+string idade = Console.ReadLine();
+Console.Write("Digite o seu salario: ");
+string sal = Console.ReadLine();
+Console.Write("Digite um número muito grande: ");
+string numgrande = Console.ReadLine();
+Console.WriteLine("Vc tem {0} anos e ganha {1} euros por mês!", idade, sal);
+Console.WriteLine("Digitou o número {0}", numgrande);
+
 
 Console.WriteLine();
 
