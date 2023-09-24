@@ -249,6 +249,113 @@ Console.WriteLine();
 //MULTIBANCO
 Console.WriteLine("MULTIBANCO");
 
+double saldo = 1000.00;
+int saida = 1;
+
+while (saida == 1)
+{
+
+    Console.WriteLine("1. Levantamento");
+    Console.WriteLine("2. Depósito");
+    Console.WriteLine("3. Pagamento de Serviços");
+    Console.WriteLine("4. Fim");
+    Console.WriteLine();
+    Console.Write("Digite a sua opção --> ");
+
+    int escolha;
+    if (!int.TryParse(Console.ReadLine(), out escolha))
+    {
+        Console.WriteLine("Opção inválida. Tente novamente.");
+        continue;
+    }
+
+    switch (escolha)
+    {
+        case 1:
+            Console.Write("Digite o valor para levantamento: ");
+            double valorLevantamento;
+            if (double.TryParse(Console.ReadLine(), out valorLevantamento))
+            {
+                if (valorLevantamento <= saldo)
+                {
+                    saldo -= valorLevantamento;
+                    Console.WriteLine("Levantamento bem-sucedido. Saldo atual: {0:C}", saldo);
+                    Console.WriteLine("Retire o talão");
+                    Console.WriteLine();
+                    Console.WriteLine("--------------------------------------------");
+                }
+                else
+                {
+                    Console.WriteLine("Saldo insuficiente para levantamento.");
+                    Console.WriteLine();
+                    Console.WriteLine("--------------------------------------------");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Valor inválido. Tente novamente.");
+                Console.WriteLine();
+                Console.WriteLine("--------------------------------------------");
+            }
+            break;
+        case 2:
+            Console.Write("Digite o valor para depósito: ");
+            double valorDeposito;
+            if (double.TryParse(Console.ReadLine(), out valorDeposito))
+            {
+                if (valorDeposito > 0)
+                {
+                    saldo += valorDeposito;
+                    Console.WriteLine("Depósito bem-sucedido. Saldo atual: {0:C}", saldo);
+                    Console.WriteLine("Retire o talão");
+                    Console.WriteLine();
+                    Console.WriteLine("--------------------------------------------");
+                }
+                else
+                {
+                    Console.WriteLine("Valor inválido para depósito.");
+                    Console.WriteLine();
+                    Console.WriteLine("--------------------------------------------");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Valor inválido. Tente novamente.");
+                Console.WriteLine();
+                Console.WriteLine("--------------------------------------------");
+            }
+            break;
+        case 3:
+
+            string entidade, referencia;
+
+            Console.WriteLine("Pagamento de serviços");
+            Console.Write("Entidade --> ");
+            entidade = Console.ReadLine();
+            Console.Write("Referência --> ");
+            referencia = Console.ReadLine();
+            Console.Write("Quantia --> ");
+            string quantiastr = Console.ReadLine();
+            int quantia = Convert.ToInt32(quantiastr);
+            saldo -= quantia;
+            Console.WriteLine("Pagamento bem-sucedido. Saldo atual: {0:C}", saldo);
+            Console.WriteLine("Retire o talão");
+            Console.WriteLine();
+            Console.WriteLine("--------------------------------------------");
+
+            break;
+        case 4:
+            Console.WriteLine("Retire o seu cartão. Obrigado por utilizar o Multibanco.");
+            saida = 0;
+            break;
+        default:
+            Console.WriteLine("Opção inválida. Tente novamente.");
+            Console.WriteLine();
+            Console.WriteLine("--------------------------------------------");
+            break;
+    }
+}
+
 Console.WriteLine();
 
 //NÚMEROS ÍMPARES
