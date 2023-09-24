@@ -79,8 +79,6 @@ Console.WriteLine("Lisboa".CompareTo("Lsb"));
 string name = "Braga a melhor cidade do mundo, a segunda é => Porto".Split("=> ")[1];
 Console.WriteLine(name);
 
-
-
 Console.WriteLine();
 
 //NÚMEROS INTEIROS
@@ -148,10 +146,31 @@ Console.WriteLine();
 //DATAS CRONOLÓGICAS
 Console.WriteLine("DATAS CRONOLÓGICAS");
 
+// Criar um objeto DateTime de exemplo
+DateTime data = DateTime.Now;
+
+// Formatos pré-definidos
+Console.WriteLine("Formatos Pré-definidos:");
+Console.WriteLine("Universal Sortable: {0:s}", data.ToUniversalTime().ToString("s"));
+Console.WriteLine("Universal Full Date: {0:U}", data.ToUniversalTime());
+Console.WriteLine("Data Longa: {0:D}", data);
+Console.WriteLine("Data Curta: {0:d}", data);
+Console.WriteLine("Hora Longa: {0:T}", data);
+Console.WriteLine("Hora Curta: {0:t}", data);
+
 Console.WriteLine();
 
 //FORMATOS NUMÉRICOS
 Console.WriteLine("FORMATOS NUMÉRICOS");
+
+Console.WriteLine("Decimal: {0}", 2500);
+Console.WriteLine("Scientific: {0:E}", 0.7887600);
+Console.WriteLine("Fixed Point: {0:F}", 0.79);
+Console.WriteLine("Formato geral: {0:G}", 2500);
+Console.WriteLine("Round-trip: {0:R}", 0.7887600);
+Console.WriteLine("Number: {0:N}", 2500);
+Console.WriteLine("Percent: {0:P}", 0.7887600);
+Console.WriteLine("Hexadecimal: 0x{0:X}", 2500);
 
 Console.WriteLine();
 
