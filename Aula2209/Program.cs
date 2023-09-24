@@ -87,13 +87,13 @@ sbyte sb = 34;
 byte b = 250;
 short sh = 32000;
 ushort ush = 60000;
-int i = 100000012;
+int inteiro = 100000012;
 uint ui = 3500000000;
 long l = 1532333333334581239;
 ulong ul = 14532333333334581239;
 
 Console.WriteLine(sb + "<" + b + "<" + sh + "<" + ush);
-Console.WriteLine(i + "<" + l + "<" + ui + "<" + ul + "\n");
+Console.WriteLine(inteiro + "<" + l + "<" + ui + "<" + ul + "\n");
 
 Console.WriteLine();
 
@@ -360,6 +360,21 @@ Console.WriteLine();
 
 //NÚMEROS ÍMPARES
 Console.WriteLine("NÚMEROS ÍMPARES");
+Console.Write("Limite inferior: ");
+int limiteInferior = int.Parse(Console.ReadLine());
+
+Console.Write("Limite superior: ");
+int limiteSuperior = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Números ímpares entre {0} e {1}:", limiteInferior, limiteSuperior);
+
+for (int i = limiteInferior; i <= limiteSuperior; i++)
+{
+    if (i % 2 != 0)
+    {
+        Console.WriteLine(i);
+    }
+}
 
 Console.WriteLine();
 
