@@ -139,6 +139,10 @@ Console.WriteLine();
 //PERCENTAGENS
 Console.WriteLine("PERCENTAGENS");
 
+Console.WriteLine("{0:F2}%", (456.84 / 1000) * 100);
+Console.WriteLine("{0:F2}%", (456.79 / 1000) * 100);
+Console.WriteLine("{0:F1}%", ((double)457 / 1000) * 100);
+
 Console.WriteLine();
 
 //DATAS CRONOLÓGICAS
