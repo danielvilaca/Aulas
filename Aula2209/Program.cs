@@ -119,7 +119,6 @@ Console.WriteLine("CONVERSÃO DE ALFANUMÉRICOS PARA NUMÉRICOS");
 string alfanum = "100";
 
 int numer = Convert.ToInt32(alfanum);
-
 Console.WriteLine(numer);
 
 string tamanho = Convert.ToString(numer);
@@ -127,13 +126,13 @@ Console.WriteLine(tamanho + " tem " + tamanho.Length + " dígitos.\n");
 
 Console.WriteLine();
 
-//CONVERSÃO DE ALFANUMÉRICOS PARA NUMÉRICOS
-Console.WriteLine("CONVERSÃO DE ALFANUMÉRICOS PARA NUMÉRICOS");
-
-Console.WriteLine();
-
 //ARREDONDAMENTOS DE NÚMEROS REAIS
 Console.WriteLine("ARREDONDAMENTOS DE NÚMEROS REAIS");
+Console.WriteLine("{0, 4:F2}", 4.789876);
+Console.WriteLine("{0, 4:F2}", 4.701876);
+Console.WriteLine("{0, 4:F2}", 5.898765);
+Console.WriteLine("{0, 4:F2}", 5.004987);
+Console.WriteLine();
 
 Console.WriteLine();
 
