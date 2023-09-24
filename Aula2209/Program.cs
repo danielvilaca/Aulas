@@ -219,6 +219,30 @@ Console.WriteLine();
 
 //MAIOR DE DOIS
 Console.WriteLine("MAIOR DE DOIS");
+Console.Write("Digite um número: ");
+string num1Str = Console.ReadLine();
+Console.Write("Digite outro número: ");
+string num2Str = Console.ReadLine();
+
+int num1 = Convert.ToInt32(num1Str);
+int num2 = Convert.ToInt32(num2Str); 
+
+int maior;
+
+if (num1 > num2)
+{
+    maior = num1;
+}
+else if (num1 < num2)
+{
+    maior = num2;
+}
+else
+{
+    maior = num1;
+}
+
+Console.WriteLine("{0} é o maior dos dois números: {1} e {2}", maior, num1, num2);
 
 Console.WriteLine();
 
