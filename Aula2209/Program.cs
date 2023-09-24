@@ -176,6 +176,21 @@ Console.WriteLine();
 
 //OPERADORES COMBINADOS
 Console.WriteLine("OPERADORES COMBINADOS");
+int salario = 1000;
+int vendas = 100;
+int capital = 1050;
+int dividendo = 10;
+int divisor = 3;
+
+salario += 10;
+vendas -= 20;
+capital *= 1;
+dividendo %= divisor;
+
+Console.WriteLine("Salário depois do aumento={0}", salario);
+Console.WriteLine("Vendas líquidas={0}", vendas);
+Console.WriteLine("Capital acumulado={0}", capital);
+Console.WriteLine("Resto da divisão de 10 por 3={0}", dividendo);
 
 Console.WriteLine();
 
