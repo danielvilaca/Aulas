@@ -14,6 +14,13 @@ internal class Program
         A = 17
     };
 
+    enum situacao : int
+    {
+        Aprovado = 2,
+        Oral = 5,
+        Reprovado = 8,
+    };
+
 
     private static void Main(string[] args)
     {
@@ -158,18 +165,28 @@ internal class Program
 
 
         //ENUMERAÇÕES
+        Console.Write("ENUMERAÇÕES");
         Console.Write("\nDistinção >= {0}", (int)notas.A);
         Console.WriteLine("\nAprovações >= {0}", (int)notas.C);
         Console.WriteLine("\nOral entre {0} e {1}", (int)notas.D, (int)notas.C);
         Console.WriteLine("\nReprovados <= {0}", (int)notas.D);
 
+        Console.WriteLine();
+
+        //ENUMERAÇÕES 2
+        Console.Write("ENUMERAÇÕES2");
+        Console.WriteLine("\nGeral {0} \nNumero {1}", situacao.Aprovado, (int)situacao.Aprovado);
+        Console.WriteLine("\nGeral {0} \nNumero {1}", situacao.Oral, (int)situacao.Oral);
+        Console.WriteLine("\nGeral {0} \nNumero {1}", situacao.Reprovado, (int)situacao.Reprovado);
+
+        Console.WriteLine();
 
         //ARREDONDAMENTOS DE NÚMEROS REAIS
         Console.WriteLine("ARREDONDAMENTOS DE NÚMEROS REAIS");
-        Console.WriteLine("{0, 4:F2}", 4.789876);
-        Console.WriteLine("{0, 4:F2}", 4.701876);
-        Console.WriteLine("{0, 4:F2}", 5.898765);
-        Console.WriteLine("{0, 4:F2}", 5.004987);
+        Console.WriteLine("{0, 4:F2}", 4.78905);
+        Console.WriteLine("{0, 4:F2}", 4.7);
+        Console.WriteLine("{0, 4:F2}", 5.8954);
+        Console.WriteLine("{0, 4:F2}", 5);
         Console.WriteLine();
 
         Console.WriteLine();
@@ -177,9 +194,9 @@ internal class Program
         //PERCENTAGENS
         Console.WriteLine("PERCENTAGENS");
 
-        Console.WriteLine("{0:F2}%", 456.84 / 1000 * 100);
-        Console.WriteLine("{0:F2}%", 456.79 / 1000 * 100);
-        Console.WriteLine("{0:F1}%", (double)457 / 1000 * 100);
+        Console.WriteLine("{0:F2}%", 0.456789 * 100);
+        Console.WriteLine("{0:F3}%", 0.456789 * 100);
+        Console.WriteLine("{0:F1}%", 0.456789 * 100);
 
         Console.WriteLine();
 
@@ -417,6 +434,25 @@ internal class Program
         }
 
         Console.WriteLine();
+
+        //FUNÇOES MATEMÁTICAS
+
+        int x, y;
+        double funcmat;
+
+        Console.WriteLine("Digite o valor de x: ");
+        x = int.Parse(Console.ReadLine());
+        Console.WriteLine("Digite o valor de y: ");
+        y = int.Parse(Console.ReadLine());
+
+
+
+        funcmat = (y + (Math.Sqrt(Math.Abs(2 * x + 10)))) / (2 * x);
+
+        Console.WriteLine(funcmat);
+
+        Console.WriteLine();
+
     }
 }
 
