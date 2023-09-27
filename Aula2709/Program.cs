@@ -90,7 +90,9 @@ Console.WriteLine("      6    ".Trim());
 Console.WriteLine("Lisboa".CompareTo("Lsb"));
 string name = "Braga a melhor cidade do mundo, a segunda é => Porto".Split("=> ")[1];
 Console.WriteLine(name);
-Console.WriteLine("teste teste teste teste teste".Split(" ")[0]);
+
+string testestring = "teste teste teste teste teste".Trim();
+Console.WriteLine(testestring);
 
 Console.WriteLine();
 
