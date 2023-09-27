@@ -1,10 +1,19 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+//EXERCICIO 1
+Console.WriteLine("Bem-vindos ao C#");
+
+//EXERCICIO 1
+string asdf = "alunos";
+string qwerty = "bem-vindos";
+
+Console.WriteLine("Caros " + asdf + " sejam " + qwerty + " ao C#!");
+
 //ALINHAMENTO À DIREITA
 Console.WriteLine("ALINHAMENTO À DIREITA");
-Console.WriteLine("Maria" .PadRight(20) + "Barcelos" .PadRight(20));
-Console.WriteLine("Filipe" .PadRight(20) + "Braga" .PadRight(20));
-Console.WriteLine("Manel" .PadRight(20) + "Porto" .PadRight(20));
+Console.WriteLine("Maria".PadRight(20) + "Barcelos".PadRight(20));
+Console.WriteLine("Filipe".PadRight(20) + "Braga".PadRight(20));
+Console.WriteLine("Manel".PadRight(20) + "Porto".PadRight(20));
 
 //CONCATENAÇÃO DE STRINGS
 string nome = "Luisa";
@@ -19,8 +28,8 @@ Console.WriteLine();
 
 //ALINHAMENTO À ESQUERDA
 Console.WriteLine("ALINHAMENTO À ESQUERDA");
-Console.WriteLine("Maria" .PadLeft(20) + "Barcelos" .PadLeft(20));
-Console.WriteLine("Filipe".PadLeft(20) + "Braga" .PadLeft(20));
+Console.WriteLine("Maria".PadLeft(20) + "Barcelos".PadLeft(20));
+Console.WriteLine("Filipe".PadLeft(20) + "Braga".PadLeft(20));
 
 Console.WriteLine();
 
@@ -34,17 +43,20 @@ Console.WriteLine();
 
 //OPERAÇÕES ARITMÉTICAS
 Console.WriteLine("OPERAÇÕES ARITMÉTICAS");
-Console.WriteLine(21.5 + 21.5);
-Console.WriteLine(8.888888888888 / 2);
-Console.WriteLine(1 * 1);
+Console.WriteLine(4 + 3 * (15-2));
+Console.WriteLine(40 / 9);
+Console.WriteLine(40 % 3);
 
 Console.WriteLine();
 
 //FUNÇÕES MATEMÁTICAS
+double numteste = 9.976578;
 Console.WriteLine("FUNÇÕES MATEMÁTICAS");
-Console.WriteLine(Math.Pow(2, 2));
+Console.WriteLine(Math.Pow(3, 5));
 Console.WriteLine(Math.Sqrt(125));
 Console.WriteLine(Math.Exp(2));
+Console.WriteLine(Math.Round(numteste));
+Console.WriteLine(Math.Sin(30));
 
 Console.WriteLine();
 
@@ -59,12 +71,12 @@ testeconv = Convert.ToInt32(teste);
 bool verifica = testeconv == num;
 Console.WriteLine(verifica);
 
-Console.WriteLine(1 == 2);
-Console.WriteLine(1 != 2);
-Console.WriteLine(3 > 2);
-Console.WriteLine((3 < 4) && (5 > 6));
-Console.WriteLine(3 > 4 || 1 > 2);
-Console.WriteLine(!(4 > 5 || 6 > 7));
+Console.WriteLine(4 == 5);
+Console.WriteLine(4 != 6);
+Console.WriteLine(4 > 5);
+Console.WriteLine((4 < 5) && (6 > 10));
+Console.WriteLine(40 > 50 || 60 > 90);
+Console.WriteLine(!(40 < 50 || 60 > 90));
 
 Console.WriteLine();
 
@@ -78,6 +90,7 @@ Console.WriteLine("      6    ".Trim());
 Console.WriteLine("Lisboa".CompareTo("Lsb"));
 string name = "Braga a melhor cidade do mundo, a segunda é => Porto".Split("=> ")[1];
 Console.WriteLine(name);
+Console.WriteLine("teste teste teste teste teste".Split(" ")[0]);
 
 Console.WriteLine();
 
@@ -199,7 +212,7 @@ Console.WriteLine("LEITURA DE DADOS ALFANUMÉRICOS");
 Console.Write("Digite o seu nome: ");
 string nomeuser = Console.ReadLine();
 
-Console.WriteLine("Boa Tarde, " +  nomeuser + "!");
+Console.WriteLine("Boa Tarde, " + nomeuser + "!");
 
 Console.WriteLine();
 
@@ -225,7 +238,7 @@ Console.Write("Digite outro número: ");
 string num2Str = Console.ReadLine();
 
 int num1 = Convert.ToInt32(num1Str);
-int num2 = Convert.ToInt32(num2Str); 
+int num2 = Convert.ToInt32(num2Str);
 
 int maior;
 
