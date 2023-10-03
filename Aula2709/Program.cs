@@ -436,7 +436,6 @@ internal class Program
         Console.WriteLine();
 
         //FUNÇOES MATEMÁTICAS
-
         int x, y;
         double funcmat;
 
