@@ -66,6 +66,7 @@ namespace Aula2909
 
             Console.WriteLine("\nExercício 2:");
             Exercicio2.LerEVetorComSentinela();
+
         }
     }
 }
