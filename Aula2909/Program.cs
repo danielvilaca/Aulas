@@ -107,12 +107,48 @@ namespace Aula2909
         }
     }
 
+    class Exercicio5
+    {
+        public static void AdicaoEMultiplicacaoDeVetores()
+        {
+            Console.Write("Quantos elementos têm cada vetor? ");
+            int n = int.Parse(Console.ReadLine());
+
+            int[] vetorA = new int[n];
+            int[] vetorB = new int[n];
+
+            Console.WriteLine("Digite os elementos do vetor A:");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write($"Elemento A[{i}] = ");
+                vetorA[i] = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("Digite os elementos do vetor B:");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write($"Elemento B[{i}] = ");
+                vetorB[i] = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("Adição e produto dos elementos dos dois vetores:");
+
+            for (int i = 0; i < vetorA.Length; i++)
+            {
+                int soma = vetorA[i] + vetorB[i];
+                int produto = vetorA[i] * vetorB[i];
+
+                Console.WriteLine($"{vetorA[i]} + {vetorB[i]} = {soma}");
+                Console.WriteLine($"{vetorA[i]} * {vetorB[i]} = {produto}");
+            }
+        }
+    }
 
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Exercício 1:");
+            Console.WriteLine("\nExercício 1:");
             Exercicio1.LerEImprimirVetor();
 
             Console.WriteLine("\nExercício 2:");
@@ -121,8 +157,12 @@ namespace Aula2909
             Console.WriteLine("\nExercício 2:");
             Exercicio3.FormarVetorLetras();
 
+            Console.WriteLine("\nExercício 4:");
             int[] vetor = { 4, 2, 5, 4, 3, 5, 2, 2, 4 };
             Exercicio4.ContagemElementos(vetor);
+
+            Console.WriteLine("\nExercício 5:");
+            Exercicio5.AdicaoEMultiplicacaoDeVetores();
         }
       
     }
